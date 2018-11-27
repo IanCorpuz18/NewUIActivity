@@ -13,11 +13,11 @@ const CustomButton = props => (
  margin: 5,
 borderRadius: 20,
 borderWidth: 2,
-borderColor:'#FF5A5F',
+borderColor:'#F38B4C',
 alignItems: 'center',
  width:'80%',
 alignSelf:'center',
-backgroundColor:'#FF5A5F'
+backgroundColor:'#F38B4C'
 }
 })
 export default CustomButton;
