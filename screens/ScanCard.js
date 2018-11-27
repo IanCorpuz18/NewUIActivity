@@ -7,7 +7,8 @@ import LocalImagePaypal from '../components/LocalImagePaypal'
 import Icon from 'react-native-vector-icons/Ionicons'
 import LocalImageJcb from '../components/LocalImageJcb'
 import LocalImageMC from '../components/LocalImageMC'
-
+import LocalImageVisa2 from '../components/LocalImageVisa2'
+import Fa from 'react-native-vector-icons/FontAwesome5'
 class ScanCard extends Component {
     alertHolder=() => {
         Alert.alert(
@@ -53,7 +54,7 @@ class ScanCard extends Component {
                 <TextInput style={styles.CreditTextInput}/>
                 </View>
                 <View style={styles.IconHolder}>
-                <LocalImageVisa 
+                <LocalImageVisa2 
                   source={require('../assets/visa.png')} 
                   originalWidth={4060}
                   originalHeight={1648}/>
@@ -61,14 +62,57 @@ class ScanCard extends Component {
                 </View>
                 </View>
 
-                <View style={styles.ShippingHolder3}>
-              
+                <View style={styles.CreditCardHolder}>
+                <View style={styles.TitleCreditHolder}>
+                <Text style={styles.CreditCardTitleText}>
+                Credit Card #No
+                </Text>
+                </View>
+                <View style={styles.ItemsHolder}>
+                <View style={styles.CreditTextInputHolder}>
+                <TextInput style={styles.CreditTextInput}/>
+                </View>
+                <View style={styles.IconHolder}>
+                <Fa name="question-circle" size={40} color="#F38B4C" />
+                </View>
+                </View>
                 </View>
               
 
                 <View style={styles.FooterTextsHolder}>
 
-               
+                    <View style={styles.AgreementHolder}>
+
+                    <View style={styles.DivisionRow}>
+
+                    <View style={styles.CheckBoxAgreeHolder}>
+                    <TextInput style={styles.AgreeCheckbox}/>
+                    </View>
+                   
+                    <View style={styles.TextHolderAgree}>
+                    <Text style={styles.AgreementText}>
+                    Agree to our terms and conditions
+                    </Text>
+                    </View>
+
+                    </View>
+
+                    </View>
+
+                    <View style={styles.AgreementTextHolder}>
+                        <Text style={styles.AgreementContent}>
+                        I agree that i have read and accepted our
+                        </Text>
+                        <View style={styles.ColortextHOlder}>
+                        <Text style={styles.AgreementContent2}>
+                        terms & conditions 
+                        </Text>
+                        <Text style={styles.AgreeContent3}>
+                        for your purchase
+                        </Text>
+                        </View>
+                    </View>
+
                 </View>
 
                 <View style={styles.ButtonHolder}>
@@ -86,7 +130,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white"
     },
     NameTextInputHolder: {
-        flex: .4,
+        flex: .075,
         backgroundColor: "white",
         justifyContent: 'flex-end',
         margin: 10,
@@ -101,20 +145,20 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     Holder:{
-        flex:7,
+        flex:4,
         flexDirection:"row",
         alignItems: 'center',
         justifyContent:"space-around"
     },
     ScanText:{
-            fontSize:16,
+            fontSize:17,
             fontWeight: 'bold',
     },
     Proxy:{
         flex:1
     },
     CameraHolder: {
-        flex: .3,
+        flex: .1,
         backgroundColor: "#F0F0F0",
         flexDirection:"row",
         justifyContent:"space-around",
@@ -122,17 +166,17 @@ const styles = StyleSheet.create({
         margin:10
     },
     CreditCardHolder: {
-        flex: .5,
+        flex: .275,
         backgroundColor: "white",
         flexDirection:"column",
-        justifyContent:"space-between",
+        // justifyContent:"space-between",
         margin:10
     },
     TitleCreditHolder:{
         flex:.2
     },
     ItemsHolder:{
-        flex:.4,
+        flex:1,
         flexDirection:"row"
     },
     CreditTextInputHolder:{
@@ -146,43 +190,56 @@ const styles = StyleSheet.create({
         flex: .5,
         backgroundColor: "white",
         flexDirection:"row",
-        justifyContent:"space-between",
+        // justifyContent:"space-between",
         margin:10
     },
     FooterTextsHolder:{
+        flex:.6,
+    },
+    AgreementHolder:{
         flex:1.6,
+        // flexDirection:"row"
     },
-    ShippingTitleHolder:{
-        flex:.3,
-        flexDirection:"row"
-    },  
-    Shippingholder:{
+    DivisionRow:{
         flex:1,
-        margin:10,
         flexDirection:"row",
-        
+        alignItems: 'center',
     },
-    AddressTextsHolder:{
-        flex:1,
-        justifyContent:"flex-start",
-        margin: 10,
+    CheckBoxAgreeHolder:{
+        flex:2,
+        justifyContent:"space-around"
     },
-    ShippingTitleText:{
-        fontSize:18,
-        color: "#BFBFBF",
-        marginRight:18
+    TextHolderAgree:{
+        flex:8
     },
-    TextAddress:{
-        fontSize:16,
-        color:"black",
-        fontWeight: 'bold',
+    AgreeCheckbox:{
+        borderColor:"black",
+        borderWidth:1,
+        width:25,
+        height:25
     },
-     Half:{
+    AgreementTextHolder:{
         flex:1
     },
-    ButtonHolder: {
-        flex: .4
+    AgreementText:{
+        fontSize:18,
+        fontWeight:"bold"
     },
- 
+    ButtonHolder: {
+        flex: .2
+    },
+    ColortextHOlder:{
+        flexDirection:"row"
+    },
+    AgreementContent2:{
+        color:"#F38B4C",
+        fontSize:16
+    },
+    AgreeContent3:{
+        fontSize:16
+    },
+    AgreementContent:{
+        fontSize:16
+    }
 })
 export default ScanCard;
