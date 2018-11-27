@@ -173,10 +173,10 @@ const styles = StyleSheet.create({
         margin:10
     },
     TitleCreditHolder:{
-        flex:.2
+        flex:.4
     },
     ItemsHolder:{
-        flex:1,
+        flex:.4,
         flexDirection:"row"
     },
     CreditTextInputHolder:{
@@ -207,7 +207,8 @@ const styles = StyleSheet.create({
     },
     CheckBoxAgreeHolder:{
         flex:2,
-        justifyContent:"space-around"
+        justifyContent:"space-around",
+        margin:10
     },
     TextHolderAgree:{
         flex:8
