@@ -13,20 +13,19 @@ export default StackNav = createStackNavigator({
         title: "Checkout",
         headerStyle:{
             backgroundColor:"#2ABB9C",
-            textAlign:"center"
+            // textAlign:"center"
         },
         headerLeft:
             <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
             size={30} color="white" style={{marginLeft:10}}/>,
-        headerRight:
-        <Icon name="ios-notifications" size={30} color="white" style={{marginRight:10}}/>,
+        
     }
     },
-  Address:Address,
-  Shipping:Shipping,
-  CardStack:CardStack
 },
     
-
+{
+    
+    headerLayoutPreset:"center",
+}
     
 )

@@ -27,7 +27,7 @@ import CustomButton from '../components/CustomButton';
     <View style={styles.AddressHolder}>
     <View style={styles.AddressTextHolder}>
     <Text style={styles.AddressText}>
-    Address line
+    Address line 
     </Text>
     </View>
 
@@ -36,33 +36,55 @@ import CustomButton from '../components/CustomButton';
     </View>
     </View>
 
+
+    <View style={styles.AddressHolder2}>
+    <View style={styles.AddressTextHolder2}>
+    <Text style={styles.AddressText2}>
+    Address line 2
+    </Text>
+    </View>
+
+    <View style={styles.AddressTextInputHolder2}>
+    <TextInput style={styles.addressTextInput2}/>
+    </View>
+    </View>
+
         <View style={styles.GeneralCityZipHolder}>
         <View style={styles.MainCityTextInputHolder}>
+        <View style={styles.CityTextHolder}>
         <Text style={styles.CityText}>City</Text>
-        <View style={styles.TextInputHolder}>
+        </View>
+        <View style={styles.CityInputHolder}>
         <TextInput style={styles.CityTextInput}/>
         </View>
         </View>
 
         <View style={styles.MainZipTextInputHolder}>
+        <View style={styles.ZipTextHolder}>
         <Text style={styles.ZipText}>Zip</Text>
-        <View style={styles.TextInputHolder}>
+        </View>
+        <View style={styles.ZipInputHolder}>
         <TextInput style={styles.ZipTextInput}/>
         </View>
         </View>
         </View>
 
         <View style={styles.GeneralStateCountryHolder}>
+     
         <View style={styles.MainStateTextInput}>
+        <View style={styles.StateTextHolder}>
         <Text style={styles.StateText}>State</Text>
-        <View style={styles.TextInputHolder}>
+        </View>
+        <View style={styles.StateInputHolder}>
         <TextInput style={styles.stateTextInput}/>
         </View>
         </View>
 
         <View style={styles.MainCountryTextInput}>
+        <View style={styles.CountryTextHolder}>
         <Text style={styles.CountryText}>Country</Text>
-        <View style={styles.TextInputHolder}>
+        </View>
+        <View style={styles.CountryInputHolder}>
         <TextInput style={styles.countryTextInput}/>
         </View>
         </View>
@@ -74,7 +96,9 @@ import CustomButton from '../components/CustomButton';
     </View>
 
         <View style={styles.ButtonHolder}>
-        <CustomButton>Next Step</CustomButton>
+        <CustomButton onPress={() => 
+        this.props.navigation.navigate('Shipping')}
+             >Next Step</CustomButton>
         </View>
 
     </View>
@@ -87,7 +111,7 @@ import CustomButton from '../components/CustomButton';
         backgroundColor:"white"
     },
     NameTextInputHolder:{
-        flex:1.5,
+        flex:.8,
         backgroundColor:"white"
     },
     YournameHolder:{
@@ -100,116 +124,204 @@ import CustomButton from '../components/CustomButton';
         color:"#BFBFBF"
     },
     TextInputHolder:{
-        flex:1.5,
+        flex:1,
         flexDirection: 'row',
     },
     FirstNameHolder:{
         flex:1,
-        backgroundColor:"green",
+        backgroundColor:"white",
         margin: 10,
     },
     FnameTextInput:{
         width:"100%",
-        backgroundColor:"gray"
+        backgroundColor:"white",
+        borderWidth:1,
+        borderColor:"black"
     },
     LastNameHolder:{
         flex:1,
-        backgroundColor:"blue",
+        backgroundColor:"white",
         margin: 10,
     },
     LnameTextInput:{
         width:"100%",
-        backgroundColor:"gray"
+        backgroundColor:"white",
+        borderWidth:1,
+        borderColor:"black"
     },
     AddressHolder:{
-        flex:1,
-        backgroundColor:"orange"
+        flex:.9,
+        backgroundColor:"white"
     },
     AddressTextHolder:{
-        flex:1
+        flex:.5,
+        justifyContent:"flex-end",
+        marginLeft: 10,
     },
     AddressText:{
-        fontSize:12,
-        color:"#BFBFBF"
+        fontSize:15,
+        color:"#BFBFBF",
     },
     AddressTextInputHolder:{
         flex:1,
-        backgroundColor:"violet"
+        backgroundColor:"white",
+        margin: 10,
     },
-    GeneralCityZipHolder:{
+    addressTextInput:{
+        width:"100%",
+        backgroundColor:"white",
+        borderWidth:1,
+        borderColor:"black"
+    },
+
+    AddressHolder2:{
+        flex:.9,
+        backgroundColor:"white"
+    },
+    AddressTextHolder2:{
+        flex:.5,
+        justifyContent:"flex-end",
+        marginLeft: 10,
+    },
+    AddressText2:{
+        fontSize:15,
+        color:"#BFBFBF",
+    },
+    AddressTextInputHolder2:{
         flex:1,
+        backgroundColor:"white",
+        margin: 10,
+    },
+    addressTextInput2:{
+        width:"100%",
+        backgroundColor:"white",
+        borderWidth:1,
+        borderColor:"black"
+    },
+    
+
+    GeneralCityZipHolder:{
+        flex:.8,
         flexDirection:"row"
     },
     MainCityTextInputHolder:{
-        flex:1
+        flex:1,
+        // margin:10
+    },
+    CityTextHolder:{
+        flex:.5,
+        justifyContent:"flex-end",
+        marginLeft: 10,
     },
     CityText:{
-        fontSize:12,
+        fontSize:15,
         color:"#BFBFBF"
+    },
+    CityInputHolder:{
+        flex:1.5,
+         backgroundColor:"white",
+        margin: 10,
     },
     CityTextInput:{
         borderWidth:1,
         borderColor: "black",
-        width:"80%"
+        width:"100%"
     },
     MainZipTextInputHolder:{
-        flex:1
+        flex:1,
+        // margin:10
+    },
+    ZipTextHolder:{
+        flex:.5,
+        justifyContent:"flex-end",
+        marginLeft: 10,
     },
     ZipText:{
-        fontSize:12,
+        fontSize:15,
         color:"#BFBFBF"
+    },
+    ZipInputHolder:{
+        flex:1.5,
+         backgroundColor:"white",
+        margin: 10,
     },
     ZipTextInput:{
         borderWidth:1,
         borderColor: "black",
-        width:"80%"
+        width:"100%"
     },
 
 
 
     GeneralStateCountryHolder:{
-        flex:1,
+        flex:.8,
         flexDirection:"row"
     },
     MainStateTextInput:{
-        flex:1
+        flex:1,
+        // margin:10
+    },
+    StateTextHolder:{
+        flex:.5,
+        justifyContent:"flex-end",
+        marginLeft: 10,
     },
     StateText:{
-        fontSize:12,
+        fontSize:15,
         color:"#BFBFBF"
+    },
+    StateInputHolder:{
+        flex:1.5,
+         backgroundColor:"white",
+        margin: 10,
     },
     stateTextInput:{
         borderWidth:1,
         borderColor: "black",
-        width:"80%"
+        width:"100%"
     },
     MainCountryTextInput:{
-        flex:1
+        flex:1,
+        // margin:10
+    },
+    CountryTextHolder:{
+        flex:.5,
+        justifyContent:"flex-end",
+        marginLeft: 10,
     },
     CountryText:{
-        fontSize:12,
+        fontSize:15,
         color:"#BFBFBF"
     },
     countryTextInput:{
          borderWidth:1,
         borderColor: "black",
-        width:"80%"
+        width:"100%"
+    },  
+    CountryInputHolder:{
+        flex:1.5,
+         backgroundColor:"white",
+        margin: 10,
     },
+
+
     FooterTextsHolder:{
-        flex:1,
-        backgroundColor:"red"
+        flex:.5,
+        backgroundColor:"white",
+        margin:10,
+        justifyContent:"space-around"
     },
     ShippingText:{
-        fontSize:12,
-        color:"#BFBFBF"
+        fontSize:16,
+        color:"#C9C9C9"
     },
     AnotherAddressText:{
-        fontSize:12,
-        color:"#BFBFBF"
+        fontSize:14,
+        color:"#F5AB7D"
 
     },
     ButtonHolder:{
-        flex:1
+        flex:.5  
     }
     })
 export default Address;

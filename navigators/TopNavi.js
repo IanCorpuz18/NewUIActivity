@@ -9,7 +9,7 @@ export default TopNavi = createMaterialTopTabNavigator({
     Address : {
         screen:Address,
     navigationOptions: {
-        tabBarLabel: 'Address',
+        tabBarLabel: "Address",
     }
     },
     Shipping: {
@@ -22,6 +22,7 @@ export default TopNavi = createMaterialTopTabNavigator({
         screen:CardStack,
     navigationOptions: {
         tabBarLabel: 'Payment',
+        
     }
     
 }
@@ -30,17 +31,18 @@ export default TopNavi = createMaterialTopTabNavigator({
     initialRouteName:'Address',
     tabBarOptions:{
         style: {
-            backgroundColor:'#2EC9A7',elevation:0,
-            borderColor:"red"
+            backgroundColor:'#2EC9A7',
+            elevation:0,
+            // borderColor:"red",
+            minHeight:70,
+            justifyContent:"center"
         },
         labelStyle:{
-            fontSize:13,
+            fontSize:15,
             fontWeight:"bold",
-            // color:"white",
-            color:"#F38D4E"
         },
-        activeTintColor: "green",
-        inactiveTintColor: "black",
+        activeTintColor: "red",
+        inactiveTintColor: "#DAF4F0",
         tabStyle:{
                 backgroundColor:"#2EC9A7",
                 

@@ -11,11 +11,11 @@ const CustomButton = props => (
     button: {
   padding: 10,
  margin: 5,
-borderRadius: 20,
+// borderRadius: 20,
 borderWidth: 2,
 borderColor:'#F38B4C',
 alignItems: 'center',
- width:'80%',
+ width:'95%',
 alignSelf:'center',
 backgroundColor:'#F38B4C'
 }
