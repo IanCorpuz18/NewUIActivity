@@ -7,19 +7,19 @@ import CardStack from './CardStack'
 import Shipping from '../screens/Shipping'
 export default TopNavi = createMaterialTopTabNavigator({
     Address : {
-        screen:Shipping,
+        screen:CardStack,
     navigationOptions: {
         tabBarLabel: "Address",
     }
     },
     Shipping: {
-        screen:Address,
+        screen:Shipping,
     navigationOptions: {
         tabBarLabel: 'Shipping',
     }
     },
     Payment: {
-        screen:CardStack,
+        screen:Address,
     navigationOptions: {
         tabBarLabel: 'Payment',
         

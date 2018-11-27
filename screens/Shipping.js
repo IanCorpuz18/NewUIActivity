@@ -91,7 +91,7 @@ class Shipping extends Component {
 
                 <View style={styles.ButtonHolder}>
                     <CustomButton onPress={() =>
-                        this.props.navigation.navigate('Shipping')}
+                        this.props.navigation.navigate('Payment')}
                     >Next Step</CustomButton>
                 </View>
 
@@ -136,14 +136,14 @@ const styles = StyleSheet.create({
 
     ShippingHolder1: {
         flex: .5,
-        backgroundColor: "pink",
+        backgroundColor: "white",
         flexDirection:"row",
         justifyContent:"space-between",
         margin:10
     },
     ShippingHolder2: {
         flex: .5,
-        backgroundColor: "pink",
+        backgroundColor: "white",
         flexDirection:"row",
         justifyContent:"space-between",
         margin:10
@@ -169,14 +169,14 @@ const styles = StyleSheet.create({
         borderTopWidth:1
     },
     ShippingTitleHolder:{
-        flex:1,
+        flex:.3,
         flexDirection:"row"
     },  
     Shippingholder:{
         flex:1,
         margin:10,
         flexDirection:"row",
-        justifyContent:"space-around"
+        // justifyContent:"space-around"
         
     },
     AddressTextsHolder:{
@@ -186,7 +186,8 @@ const styles = StyleSheet.create({
     },
     ShippingTitleText:{
         fontSize:18,
-        color: "#BFBFBF"
+        color: "#BFBFBF",
+        marginRight:18
     },
     TextAddress:{
         fontSize:16,
