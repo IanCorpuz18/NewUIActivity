@@ -5,6 +5,8 @@ import LocalImageApple from '../components/LocalImageApple'
 import LocalImageVisa from '../components/LocalImageVisa'
 import LocalImagePaypal from '../components/LocalImagePaypal'
 import Icon from 'react-native-vector-icons/Ionicons'
+import LocalImageJcb from '../components/LocalImageJcb'
+import LocalImageMC from '../components/LocalImageMC'
 class ChooseCard extends Component {
    
     render() {
@@ -26,6 +28,16 @@ class ChooseCard extends Component {
                   originalWidth={4060}
                   originalHeight={1648}
                 />
+                <LocalImageMC
+                  source={require('../assets/masterCard.png')} 
+                  originalWidth={500}
+                  originalHeight={311}
+                />
+                <LocalImageJcb
+                  source={require('../assets/jcb.png')} 
+                  originalWidth={900}
+                  originalHeight={520}
+                />
                 </View>
                 <View style={styles.TextTitleHolder}>
                 <Text style={styles.TitleText}>Creditcard</Text>
@@ -45,7 +57,7 @@ class ChooseCard extends Component {
                 </View>
                 <View style={styles.TextTitleHolder}>
                 <Text style={styles.TitleText}>Paypal</Text>
-                <Text style={styles.Subtitle}>No Additional Costs</Text>
+                <Text style={styles.Subtitle}>paypalaccount@gmail.com</Text>
                 </View>
                 </View>
 
@@ -59,41 +71,20 @@ class ChooseCard extends Component {
                 />
                 </View>
                 <View style={styles.TextTitleHolder}>
-                <Text style={styles.TitleText}>FEDEX EXPRESS</Text>
-                <Text style={styles.Subtitle}>Additional 12.99$</Text>
+                <Text style={styles.TitleText}>ApplePay</Text>
+                <Text style={styles.Subtitle}>applepay@gmail.com</Text>
                 </View>
                 </View>
               
 
                 <View style={styles.FooterTextsHolder}>
 
-                <View style={styles.ShippingTitleHolder}>
-               <View style={styles.Shippingholder}>
-                <Text style={styles.ShippingTitleText}>
-                Shipping Address
-                </Text>
-                <Icon name="ios-paper" size={30} color="#D2D2D2" />
-                </View>
-                
-                <View style={styles.Half}>
-                </View>
-
-                </View>
-
-                <View style={styles.AddressTextsHolder}>
-                <Text style={styles.TextAddress}>Johnny Doe</Text>
-                <Text style={styles.TextAddress}>11144 Military Trail (North)</Text>
-                <Text style={styles.TextAddress}>Apartment #3122</Text>
-                <Text style={styles.TextAddress}>23122 Palo Alot</Text>
-                <Text style={styles.TextAddress}>California, United States</Text>
-                </View>
-
-
+               
                 </View>
 
                 <View style={styles.ButtonHolder}>
                     <CustomButton onPress={() =>
-                        this.props.navigation.navigate('Shipping')}
+                        this.props.navigation.navigate('Second')}
                     >Next Step</CustomButton>
                 </View>
 
@@ -115,10 +106,13 @@ const styles = StyleSheet.create({
     },
     IconHolder:{
         flex:1,
-        flexDirection:"row"
+        flexDirection:"row",
+        // justifyContent:"center",
+        alignItems: 'center',
     },
     TextTitleHolder:{
         flex:1,
+        alignItems: 'center',
     },
     TitleText:{
         fontSize:21,
@@ -167,8 +161,6 @@ const styles = StyleSheet.create({
     },
     FooterTextsHolder:{
         flex:1.6,
-        borderColor:"#E6E6E6",
-        borderTopWidth:1
     },
     ShippingTitleHolder:{
         flex:.3,
@@ -199,7 +191,7 @@ const styles = StyleSheet.create({
         flex:1
     },
     ButtonHolder: {
-        flex: .5
+        flex: .4
     },
  
 })

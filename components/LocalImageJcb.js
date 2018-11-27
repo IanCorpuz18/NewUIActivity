@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {Image, Dimensions} from 'react-native'
 
-  const LocalImageMC = ({source, originalWidth, originalHeight}) => {
+  const LocalImageJcb = ({source, originalWidth, originalHeight}) => {
     let windowWidth = Dimensions.get('window').width
-    let widthChange = (windowWidth-375)/originalWidth
+    let widthChange = (windowWidth-365)/originalWidth
     let newWidth = (originalWidth * widthChange)
     let newHeight = (originalHeight * widthChange)
     return(
@@ -12,4 +12,4 @@ import {Image, Dimensions} from 'react-native'
       )
   }
 
-  export default LocalImageMC;
+  export default LocalImageJcb;

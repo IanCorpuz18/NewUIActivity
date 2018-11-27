@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
         flex:1
     },
     ButtonHolder: {
-        flex: .5
+        flex: .4,
     },
  
 })
