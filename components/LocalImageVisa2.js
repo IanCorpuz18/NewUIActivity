@@ -3,7 +3,7 @@ import {Image, Dimensions} from 'react-native'
 
   const LocalImageVisa2 = ({source, originalWidth, originalHeight}) => {
     let windowWidth = Dimensions.get('window').width
-    let widthChange = (windowWidth-330)/originalWidth
+    let widthChange = (windowWidth-340)/originalWidth
     let newWidth = (originalWidth * widthChange)
     let newHeight = (originalHeight * widthChange)
     return(

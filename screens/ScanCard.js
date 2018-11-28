@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TextInput, Alert } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Alert, CheckBox } from 'react-native'
 import CustomButton from '../components/CustomButton';
 import LocalImageApple from '../components/LocalImageApple'
 import LocalImageVisa from '../components/LocalImageVisa'
@@ -24,101 +24,128 @@ class ScanCard extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <View style={styles.NameTextInputHolder}>
-                        <Text style={styles.TextYourName}>
-                        Scan your card
-                        </Text>
-                </View>
 
+            <View style={styles.FirstView}>
+           
 
-                <View style={styles.CameraHolder}>
-                <View style={styles.Holder}>
-                <Icon name="ios-camera" size={35} color="gray"/>
-                <Text style={styles.ScanText}>
-                Save time and scan your credit card
-                </Text>
-                </View>
-                <View style={styles.Proxy}>
-                </View>
-                </View>
+             <View style={styles.ScanTextTitleHolder}>
+             <Text style={styles.ScanTitleText}>
+             Scan your card
+             </Text>
+             </View>
+            <View style={styles.IconAndTextHolder}>
+            <View style={styles.CameraIconHolder}>
+            <Fa name="camera" size={25} color="#B5B5B5"/>
+            </View>
+            <View style={styles.CaptionTextHolder}>
+            <Text style={styles.SaveTimeText}>
+            Save time and scan your credit card
+            </Text>
+            </View>
+            </View>
+             </View>
+            
+            <View style={styles.SecondView}>
+            
+            <View style={styles.CreditCardHolder}>
 
+            <View style={styles.CreditTitleTextHolder}>
+            <Text style={styles.CreditTextTitle}>
+            Credit Card #No
+            </Text>
+            </View>
 
-                <View style={styles.CreditCardHolder}>
-                <View style={styles.TitleCreditHolder}>
-                <Text style={styles.CreditCardTitleText}>
-                Credit Card #No
-                </Text>
-                </View>
-                <View style={styles.ItemsHolder}>
-                <View style={styles.CreditTextInputHolder}>
-                <TextInput style={styles.CreditTextInput}/>
-                </View>
-                <View style={styles.IconHolder}>
-                <LocalImageVisa2 
+            <View style={styles.TextInputVisaHolder}>
+
+            <View style={styles.CreditCardInputHolder}>
+            <TextInput style={styles.TextInputCreditCardNo}/>
+            </View>
+
+            <View style={styles.ImageVisaHolder}>
+             <LocalImageVisa2
                   source={require('../assets/visa.png')} 
                   originalWidth={4060}
-                  originalHeight={1648}/>
-                </View>
-                </View>
-                </View>
+                  originalHeight={1648}
+                />
+            
+            </View>
 
-                <View style={styles.CreditCardHolder}>
-                <View style={styles.TitleCreditHolder}>
-                <Text style={styles.CreditCardTitleText}>
-                Credit Card #No
-                </Text>
-                </View>
-                <View style={styles.ItemsHolder}>
-                <View style={styles.CreditTextInputHolder}>
-                <TextInput style={styles.CreditTextInput}/>
-                </View>
-                <View style={styles.IconHolder}>
-                <Fa name="question-circle" size={40} color="#F38B4C" />
-                </View>
-                </View>
-                </View>
-              
+            </View>
 
-                <View style={styles.FooterTextsHolder}>
+            </View>
 
-                    <View style={styles.AgreementHolder}>
+            </View>
 
-                    <View style={styles.DivisionRow}>
+            <View style={styles.ThirdView}>
+            
+        <View style={styles.ExpiresTextInputHolder}>
+        <View style={styles.ExpiresTextHolder}>
+        <Text style={styles.ExpiresText}>Expires</Text>
+        </View>
+        <View style={styles.ExpiresInputHolder}>
+        <TextInput style={styles.ExpiresTextInput}/>
+        </View>
+        </View>
 
-                    <View style={styles.CheckBoxAgreeHolder}>
-                    <TextInput style={styles.AgreeCheckbox}/>
-                    </View>
-                   
-                    <View style={styles.TextHolderAgree}>
-                    <Text style={styles.AgreementText}>
-                    Agree to our terms and conditions
-                    </Text>
-                    </View>
+        <View style={styles.CVVTextInputHolder}>
 
-                    </View>
+        <View style={styles.CvvTextHolder}>
+        <Text style={styles.CvvText}>CVV-Code</Text>
+        </View>
 
-                    </View>
+        <View style={styles.MarkHolder}>
+        <View style={styles.CvvInputHolder}>
+        <TextInput style={styles.CvvTextInput}/>
+        </View>
+        <View style={styles.QuestionMarkHolder}>
+        <Fa name="question-circle" size={35} color="#F38B4C"/>
+        </View>
+        </View>
 
-                    <View style={styles.AgreementTextHolder}>
-                        <Text style={styles.AgreementContent}>
-                        I agree that i have read and accepted our
-                        </Text>
-                        <View style={styles.ColortextHOlder}>
-                        <Text style={styles.AgreementContent2}>
-                        terms & conditions 
-                        </Text>
-                        <Text style={styles.AgreeContent3}>
-                        for your purchase
-                        </Text>
-                        </View>
-                    </View>
+        </View>
 
-                </View>
+        </View>
 
-                <View style={styles.ButtonHolder}>
-                    <CustomButton onPress={this.alertHolder}
-                    >Finish your Order</CustomButton>
-                </View>
+
+            <View style={styles.FourthView}>
+            
+            <View style={styles.AgreeCheckBoxHolder}>
+            
+            <View style={styles.CheckBoxholder}>
+            <CheckBox/>
+            </View>
+            <View style={styles.TextAgreeHolder}>
+            <Text style={styles.AgreeText}>
+            Agree to our terms & conditions</Text>
+            </View>
+            
+            </View>
+            <View style={styles.SpaceHolder}>
+            <View style={styles.Space}>
+            
+            </View>
+
+            <View style={styles.AgreementContentHolder}>
+            <Text style={styles.AgreementContent}>
+            I agree that i have read and accepted our
+            </Text>
+            <View style={styles.ColoredTextHolder}>
+            <Text style={styles.ColoredText}>
+            terms & conditions </Text>
+            <Text style={styles.SimpleText}>
+            for your purchase
+            </Text>
+            </View>
+            </View>
+            </View>
+            </View>
+
+            <View style={styles.ButtonHolder}>
+            <CustomButton onPress={this.alertHolder}>
+            Finish your Order
+            </CustomButton>
+            </View>
+
 
             </View>
         )
@@ -129,118 +156,192 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white"
     },
-    NameTextInputHolder: {
-        flex: .075,
-        backgroundColor: "white",
-        justifyContent: 'flex-end',
+    FirstView:{
+        flex:1,
+        backgroundColor:"white"
+    },
+    ScanTextTitleHolder:{
+        flex:1,
         margin: 10,
     },
-    TextYourName: {
+    ScanTitleText:{
         fontSize: 15,
         color: "#BFBFBF"
     },
-    CreditTextInput:{
+    IconAndTextHolder:{
+flex:4,
+flexDirection: 'row',
+justifyContent:"space-around",
+alignItems:"center",
+margin:10,
+backgroundColor:"#F0F0F0"
+    },
+    CameraIconHolder:{
+        flex:1,
+        margin:1    
+    },
+    CaptionTextHolder:{
+        flex:9,
+        // margin:10,
+    },
+    SaveTimeText:{
+        fontSize: 15,
+        color: "black",
+        fontWeight: 'bold',
+    },
+    SecondView:{
+        flex:1,
+        backgroundColor:"green"
+    },
+    CreditCardHolder:{
+        flex:1,
+        backgroundColor:"white"
+    },
+    CreditTitleTextHolder:{
+        flex:1,
+        // backgroundColor:"blue"
+        margin:10
+    },
+    CreditTextTitle:{
+        fontSize: 15,
+        color: "#BFBFBF"
+    },
+    TextInputVisaHolder:{
+        flex:5,
+        flexDirection:'row'
+    },
+    CreditCardInputHolder:{
+        flex:4,
+        backgroundColor:"white",
+        margin: 10,
+    },
+    TextInputCreditCardNo:{
         width:"100%",
-        borderColor: "black",
+        borderColor:"black",
         borderWidth: 1,
     },
-    Holder:{
-        flex:4,
-        flexDirection:"row",
-        alignItems: 'center',
-        justifyContent:"space-around"
+    ImageVisaHolder:{
+        flex:1,
+        justifyContent:"center",
+        alignItems: "flex-start",
     },
-    ScanText:{
-            fontSize:17,
-            fontWeight: 'bold',
-    },
-    Proxy:{
-        flex:1
-    },
-    CameraHolder: {
-        flex: .1,
-        backgroundColor: "#F0F0F0",
-        flexDirection:"row",
-        justifyContent:"space-around",
-        alignItems: "center",
-        margin:10
-    },
-    CreditCardHolder: {
-        flex: .275,
-        backgroundColor: "white",
-        flexDirection:"column",
-        // justifyContent:"space-between",
-        margin:10
-    },
-    TitleCreditHolder:{
-        flex:.4
-    },
-    ItemsHolder:{
-        flex:.4,
+
+    ThirdView:{
+        flex:1,
+        backgroundColor:"white",
         flexDirection:"row"
     },
-    CreditTextInputHolder:{
-        flex:3
-    },
-    IconHolder:{
-        alignItems:"flex-end",
+    ExpiresTextInputHolder:{
         flex:1
     },
-    ShippingHolder3: {
-        flex: .5,
-        backgroundColor: "white",
-        flexDirection:"row",
-        // justifyContent:"space-between",
+    ExpiresTextHolder:{
+        flex:1,
+        margin: 10,
+    },
+    ExpiresText:{
+        fontSize: 15,
+        color: "#BFBFBF"
+    },
+    ExpiresInputHolder:{
+        flex:3,
+        margin:10,
+        
+    },
+    ExpiresTextInput:{
+        width:"100%",
+        borderColor:"black",
+        borderWidth:1
+    },
+    CVVTextInputHolder:{
+        flex:1,
+    },
+    CvvTextHolder:{
+        flex:1,
         margin:10
     },
-    FooterTextsHolder:{
-        flex:.6,
+    CvvText:{
+        fontSize: 15,
+        color: "#BFBFBF"
     },
-    AgreementHolder:{
-        flex:1.6,
-        // flexDirection:"row"
+    CvvInputHolder:{
+        flex:2,
+        // margin:10
+        // margin:10,
     },
-    DivisionRow:{
+    CvvTextInput:{
+        width:"100%",
+        borderColor:"black",
+        borderWidth:1
+    },
+    QuestionMarkHolder:{
+        flex:2,
+        backgroundColor:"white",
+        alignItems:"center",
+        justifyContent:"center"
+    },
+    FourthView:{
+        flex:2,
+        backgroundColor:"white"
+    },
+    SpaceHolder:{
+        flex:5,
+        flexDirection:"row"
+    },
+    Space:{
+        flex:1
+    },
+    MarkHolder:{
+        flex:4,
+        // paddingTop: 12,
+        flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:"center",
+        // backgroundColor:"pink"
+    },
+    AgreeCheckBoxHolder:{
         flex:1,
         flexDirection:"row",
+        justifyContent:"center",
         alignItems: 'center',
     },
-    CheckBoxAgreeHolder:{
-        flex:2,
-        justifyContent:"space-around",
-        margin:10
+    CheckBoxholder:{
+        flex:1,
+        justifyContent:"center"
     },
-    TextHolderAgree:{
-        flex:8
+    TextAgreeHolder:{
+        flex:9
     },
-    AgreeCheckbox:{
-        borderColor:"black",
-        borderWidth:1,
-        width:25,
-        height:25
+    AgreeText:{
+        fontSize: 15,
+        color: "black",
+        fontWeight: 'bold',
     },
-    AgreementTextHolder:{
-        flex:1
-    },
-    AgreementText:{
-        fontSize:18,
-        fontWeight:"bold"
-    },
-    ButtonHolder: {
-        flex: .2
-    },
-    ColortextHOlder:{
-        flexDirection:"row"
-    },
-    AgreementContent2:{
-        color:"#F38B4C",
-        fontSize:16
-    },
-    AgreeContent3:{
-        fontSize:16
+    AgreementContentHolder:{
+        flex:9,
+        justifyContent:"flex-start",
+        
     },
     AgreementContent:{
-        fontSize:16
-    }
+        fontSize: 15,
+        color: "black",
+    },
+    ColoredTextHolder:{
+        flex:1,
+        flexDirection:"row"
+    },
+    ColoredText:{
+        fontSize: 15,
+        color: "#F38B4C",
+    },
+    SimpleText:{
+        fontSize: 15,
+        color: "black",
+    },
+    ButtonHolder:{
+    flex:1,
+    backgroundColor:"white",
+    justifyContent:"flex-end"
+    },
+    
 })
 export default ScanCard;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, CheckBox } from 'react-native'
 import CustomButton from '../components/CustomButton';
 import LocalImageApple from '../components/LocalImageApple'
 import LocalImageVisa from '../components/LocalImageVisa'
@@ -22,7 +22,7 @@ class ChooseCard extends Component {
                 </View>
                 <View style={styles.ShippingHolder1}>
                 <View style={styles.IconHolder}>
-                    <TextInput style={styles.CheckBox}/>
+                    <CheckBox style={styles.CheckBox}/>
                     <LocalImageVisa
                   source={require('../assets/visa.png')} 
                   originalWidth={4060}
@@ -48,7 +48,7 @@ class ChooseCard extends Component {
 
                 <View style={styles.ShippingHolder2}>
                 <View style={styles.IconHolder}>
-                <TextInput style={styles.CheckBox}/>
+                <CheckBox style={styles.CheckBox}/>
                     <LocalImagePaypal
                   source={require('../assets/Paypal.png')} 
                   originalWidth={1600}
@@ -63,7 +63,7 @@ class ChooseCard extends Component {
 
                 <View style={styles.ShippingHolder3}>
                 <View style={styles.IconHolder}>
-                <TextInput style={styles.CheckBox}/>
+                <CheckBox style={styles.CheckBox}/>
                     <LocalImageApple
                   source={require('../assets/applePay.png')} 
                   originalWidth={1192}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, CheckBox } from 'react-native'
 import CustomButton from '../components/CustomButton';
 import LocalImage from '../components/LocalImage'
 import LocalImageUps from '../components/LocalImageUps'
@@ -18,7 +18,7 @@ class Shipping extends Component {
                 </View>
                 <View style={styles.ShippingHolder1}>
                 <View style={styles.IconHolder}>
-                    <TextInput style={styles.CheckBox}/>
+                <CheckBox style={styles.CheckBox}/>
                     <LocalImage
                   source={require('../assets/DHL.png')} 
                   originalWidth={2000}
@@ -34,7 +34,7 @@ class Shipping extends Component {
 
                 <View style={styles.ShippingHolder2}>
                 <View style={styles.IconHolder}>
-                <TextInput style={styles.CheckBox}/>
+                <CheckBox style={styles.CheckBox}/>
                     <LocalImageUps
                   source={require('../assets/ups.png')} 
                   originalWidth={768}
@@ -49,7 +49,7 @@ class Shipping extends Component {
 
                 <View style={styles.ShippingHolder3}>
                 <View style={styles.IconHolder}>
-                <TextInput style={styles.CheckBox}/>
+                <CheckBox style={styles.CheckBox}/>
                     <LocalImageFedx
                   source={require('../assets/fedex.png')} 
                   originalWidth={5000}
@@ -156,11 +156,7 @@ const styles = StyleSheet.create({
         margin:10
     },
     CheckBox:{
-        width:25,
-        height:25,
-        borderWidth: 1,
-        borderColor:"black",
-        
+       
         marginRight:25,
     },
     FooterTextsHolder:{

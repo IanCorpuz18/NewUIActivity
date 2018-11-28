@@ -1,5 +1,5 @@
 import { createStackNavigator, createMaterialTopTabNavigator, createSwitchNavigator } from 'react-navigation'; 
-
+import { Dimensions } from 'react-native'
 import React from 'react'
 import Address from '../screens/Address';
 import ChooseCard from '../screens/ChooseCard';
@@ -7,7 +7,7 @@ import CardStack from './CardStack'
 import Shipping from '../screens/Shipping'
 export default TopNavi = createMaterialTopTabNavigator({
     Address : {
-        screen:CardStack,
+        screen:Address,
     navigationOptions: {
         tabBarLabel: "Address",
     }
@@ -19,7 +19,7 @@ export default TopNavi = createMaterialTopTabNavigator({
     }
     },
     Payment: {
-        screen:Address,
+        screen:CardStack,
     navigationOptions: {
         tabBarLabel: 'Payment',
         
@@ -35,24 +35,25 @@ export default TopNavi = createMaterialTopTabNavigator({
             elevation:0,
             // borderColor:"red",
             minHeight:70,
-            justifyContent:"center"
+            justifyContent:"center",
+            // height:70
+            
         },
         labelStyle:{
             fontSize:15,
             fontWeight:"bold",
         },
-        activeTintColor: "red",
+        activeTintColor: "#F38C4F",
         inactiveTintColor: "#DAF4F0",
-        tabStyle:{
-                backgroundColor:"#2EC9A7",
-                
-        },
+       
       indicatorStyle:{
-          backgroundColor:"white",
+          backgroundColor:"#F38C4F",
           width:10,
+          top:63,
           height:10,
           borderRadius:5,
-          borderColor:"red"
+        //   borderColor:"red",
+          marginLeft: Dimensions.get('window').width*.14
       }
     }
 
